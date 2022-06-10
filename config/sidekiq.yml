@@ -1,0 +1,14 @@
+---
+:concurrency: 5
+development:
+  :schedule:
+    some_active_job:
+      cron: '*/5 * * * *' # Every 5 minutes
+      class: SomeActiveJob
+    some_job:
+      cron: '*/5 * * * *' # Every 5 minutes
+      class: SomeJob
+:queues:
+  - critical
+  - default
+  - low
